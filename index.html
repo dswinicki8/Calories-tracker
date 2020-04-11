@@ -12,22 +12,22 @@
 </head>
 
 <body>
+    <div class="container-fluid">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4 text-center">Calorie Tracker</h1>
+              <h3 class="lead text-center">An app that makes the daily chore of logging calories and excercise easier!</h3>
+            </div>
+          </div>
+    </div>
+
+
 
     <div class="container-fluid">
-
-
         <div class="row mt-5" id="header">
-            <div class="col-8">
-                <div class="card" style="width: 40rem; height: 12rem;">
-                    <div class="card-body">
-                        <h2 class="card-title">Calorie Tracker</h2>
-                        <p class="card-text">An app that makes the daily chore of logging calories and excercise easier!
-                        </p>
-                    </div>
-                </div>
-            </div>
+            
             <div class="col-4">
-                <div class="card" style="width: 25rem; height: 12rem;">
+                <div class="card" style="width: 25rem; height: 15rem;">
                     <div class="card-body">
                         <h4 class="card-title">User Info:</h4>
                         <div class="input-group mb-3">
@@ -42,27 +42,39 @@
                             </div>
                             <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                         </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon3">Daily Calorie Start:</span>
+                            </div>
+                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-6">
+                <div class="progress mt-5">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                  </div>
+                  <h4 class="mt-4">Calories Remaining:<p id="calRemain"></p></h4>
+                  <h4 class="mt-4">Calories Consumed:<p id="calConsume"></p></h4>            </div>
+            <div class="col-2"></div>
         </div>
     </div>
 
     <div class="container-fluid">
-        <div class="row mt-5">
+        <div class="row mt-3">
             <div class="col-6">
-                <div class="row">
-                    <div class="card mt-5" style="width: 60rem;">
+                <div class="row ml-auto">
+                    <div class="card text-white bg-secondary border-dark mt-5" style="width: 60rem;">
                         <div class="card-body">
-                            <h4 class="card-title">Daily Meal Logger:</h4>
-                                <select class="form-control form-control-lg">
-                                    <option>Breakfast</option>
-                                    <option>Lunch</option>
-                                    <option>Dinner</option>
-                                    <option>Snack</option>
-                                    <option>Water</option>
-                                </select>
-                            <div class="input-group mt-5 mb-3">
+                            <h2 class="card-title">Daily Meal Logger:</h2>
+                            <select class="form-control form-control-lg">
+                                <option>Breakfast</option>
+                                <option>Lunch</option>
+                                <option>Dinner</option>
+                                <option>Snack</option>
+                            </select>
+                            <div class="input-group mt-3 mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon3">Food:</span>
                                 </div>
@@ -72,66 +84,64 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="card mt-5" style="width: 20rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Daily Fitness Logger:</h4>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon3">Excercise:</span>
+                <div class="row ml-auto">
+                    <div class="card text-white bg-secondary border-dark mt-3" style="width: 60rem;">
+                        <div class="card-body">
+                            <h2 class="card-title">Search Recipes:</h2>
+                            <label for="exampleInputEmail1">Calorie Count Range:</label>
+                            <form>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Minimum">
                                     </div>
-                                    <input type="text" class="form-control" id="basic-url"
-                                        aria-describedby="basic-addon3">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon3">Calories Burned:</span>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Maximum">
                                     </div>
-                                    <input type="text" class="form-control" id="basic-url"
-                                        aria-describedby="basic-addon3">
                                 </div>
-                                <button type="button" class="btn btn-success">Log</button>
+                            </form>
+                            <div class="form-check form-check-inline mt-4">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Vegetarian</label>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card mt-5" style="width: 20rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Health Goals:</h4>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon3">Intake:</span>
-                                    </div>
-                                    <input type="text" class="form-control" id="basic-url"
-                                        aria-describedby="basic-addon3">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon3">Burn:</span>
-                                    </div>
-                                    <input type="text" class="form-control" id="basic-url"
-                                        aria-describedby="basic-addon3">
-                                </div>
-                                <button type="button" class="btn btn-success">Log</button>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Vegan</label>
                             </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">Gluten-Free </label>
+                            </div>
+                            <div class="input-group mt-4 mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon3">Recipe Name:</span>
+                                </div>
+                                <input type="text" class="form-control" id="foodSearch" aria-describedby="basic-addon3">
+                            </div>
+                            <button type="button" class="btn btn-success mt-5" id="searchBtn">Search</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-6">
-                <div class="card" style="width: 50rem; height: 40rem;">
+                <div class="card border-danger mt-5" style="width: 50rem; height: 40rem;">
                     <div class="card-body">
                         <h5 class="card-title">Search Results:</h5>
                         <div class="foodOptions">
                             <ul class="list-group list-group-flush">
-                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn0">Add</button>
-                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn1">Add</button>
-                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn2">Add</button>
-                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn3">Add</button>
-                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn4">Add</button>
-                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn5">Add</button>
-                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn6">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption"
+                                    id="foodBtn0">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption"
+                                    id="foodBtn1">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption"
+                                    id="foodBtn2">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption"
+                                    id="foodBtn3">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption"
+                                    id="foodBtn4">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption"
+                                    id="foodBtn5">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption"
+                                    id="foodBtn6">Add</button>
                             </ul>
                         </div>
                     </div>
@@ -142,61 +152,93 @@
 
 
 
-    <div class="row mt-5">
+    <div class="row ml-auto mr-auto mt-5">
         <div class="col-3">
             <div class="card" style="width: 25rem;">
-                <img src="https://media.istockphoto.com/photos/breakfast-table-picture-id938158500?k=6&m=938158500&s=612x612&w=0&h=jQesaJxMrVe5w1Tibgm724d8BD_HWVoCl70l-uqoADs=" class="card-img-top" height="300px" alt="...">
+                <img src="https://media.istockphoto.com/photos/breakfast-table-picture-id938158500?k=6&m=938158500&s=612x612&w=0&h=jQesaJxMrVe5w1Tibgm724d8BD_HWVoCl70l-uqoADs="
+                    class="card-img-top" height="300px" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Breakfast</h5>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
+                <div class="foodLog">
+                    <table class="table foodTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Food</th>
+                                <th scope="col">Calories</th>
+                            </tr>
+                        </thead>
+                        <tbody class="foodTableBody">
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="col-3">
             <div class="card" style="width: 25rem;">
-                <img src="https://www.mimiscafe.com/wp-content/uploads/2019/03/Turkey-Hummus-Sandwich_840x560-px.jpg" class="card-img-top" height="300px" alt="...">
+                <img src="https://www.mimiscafe.com/wp-content/uploads/2019/03/Turkey-Hummus-Sandwich_840x560-px.jpg"
+                    class="card-img-top" height="300px" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Lunch</h5>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
+                <div class="foodLog">
+                    <table class="table foodTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Food</th>
+                                <th scope="col">Calories</th>
+                            </tr>
+                        </thead>
+                        <tbody class="foodTableBody">
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="col-3">
             <div class="card" style="width: 25rem;">
-                <img src="https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2017/10/high-protein-dinners-slow-cooker-meatballs-image.jpg" class="card-img-top" height="300px" alt="...">
+                <img src="https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2017/10/high-protein-dinners-slow-cooker-meatballs-image.jpg"
+                    class="card-img-top" height="300px" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Dinner</h5>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
+                <div class="foodLog">
+                    <table class="table foodTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Food</th>
+                                <th scope="col">Calories</th>
+                            </tr>
+                        </thead>
+                        <tbody class="foodTableBody">
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="col-3">
             <div class="card" style="width: 25rem;">
-                <img src="https://www.landolakes.com/RecipeManagementSystem/media/Recipe-Media-Files/Recipes/Retail/x17/2018_Sweet-Sallty-Snack-Mix_5817_600x600.jpg?ext=.jpg" class="card-img-top" height="300px" alt="...">
+                <img src="https://www.landolakes.com/RecipeManagementSystem/media/Recipe-Media-Files/Recipes/Retail/x17/2018_Sweet-Sallty-Snack-Mix_5817_600x600.jpg?ext=.jpg"
+                    class="card-img-top" height="300px" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Snacks</h5>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
+                <div class="foodLog">
+                    <table class="table foodTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Food</th>
+                                <th scope="col">Calories</th>
+                            </tr>
+                        </thead>
+                        <tbody class="foodTableBody">
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
 
 
 
