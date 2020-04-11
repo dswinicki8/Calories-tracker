@@ -16,7 +16,7 @@ function saveFitness() {
 $("#searchBtn").click(foodLogger);
 function foodLogger() {
     var foodSearch = $("#foodSearch").val().trim();
-    var queryURL = "https://api.nutritionix.com/v1_1/search/" + foodSearch + "?results=0:20&fields=item_name,nf_calories&appId=ebe70e9f&appKey=fd53e313cdb8d5c240702e52977603c3";
+    var queryURL = "https://api.nutritionix.com/v1_1/search/cheeseburger?results=0:20&fields=item_name,nf_calories&appId=ebe70e9f&appKey=fd53e313cdb8d5c240702e52977603c3";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -24,7 +24,7 @@ function foodLogger() {
         //
         .then(function (response) {
             var results = response.hits;
-            console.log(results)
+            console.log(response)
             for (var i = 0; i < 7; i++) {
                 console.log(results[i].fields.item_name)
                 console.log(results[i].fields.nf_calories)
@@ -80,3 +80,9 @@ function foodLogger() {
             $("tbody").append(tRow);
         }
     };
+
+    
+
+
+
+
