@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <title>Calorie Tracker</title>
 </head>
-
 <body>
-
     <div class="container-fluid">
-
-
         <div class="row mt-5" id="header">
             <div class="col-8">
                 <div class="card" style="width: 40rem; height: 12rem;">
@@ -47,7 +42,6 @@
             </div>
         </div>
     </div>
-
     <div class="container-fluid">
         <div class="row mt-5">
             <div class="col-6">
@@ -55,12 +49,11 @@
                     <div class="card mt-5" style="width: 60rem;">
                         <div class="card-body">
                             <h4 class="card-title">Daily Meal Logger:</h4>
-                                <select class="form-control form-control-lg">
-                                    <option>Breakfast</option>
-                                    <option>Lunch</option>
-                                    <option>Dinner</option>
-                                    <option>Snack</option>
-                                    <option>Water</option>
+                                <select class="form-control form-control-lg" id="mealSelector">
+                                    <option value="breakfast">Breakfast</option>
+                                    <option value="lunch">Lunch</option>
+                                    <option value="dinner">Dinner</option>
+                                    <option value="snack">Snack</option>
                                 </select>
                             <div class="input-group mt-5 mb-3">
                                 <div class="input-group-prepend">
@@ -139,74 +132,84 @@
             </div>
         </div>
     </div>
-
-
-
     <div class="row mt-5">
         <div class="col-3">
             <div class="card" style="width: 25rem;">
                 <img src="https://media.istockphoto.com/photos/breakfast-table-picture-id938158500?k=6&m=938158500&s=612x612&w=0&h=jQesaJxMrVe5w1Tibgm724d8BD_HWVoCl70l-uqoADs=" class="card-img-top" height="300px" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Breakfast</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div>
+                    <div class="foodLog">
+                        <table class="table breakfastTable">
+                            <thead>
+                              <tr>
+                                <th scope="col">Food</th>
+                                <th scope="col">Calories</th>
+                              </tr>
+                            </thead>
+                            <tbody class="breakfastTableBody">
+                            </tbody>
+                          </table>
+                    </div>
         </div>
         <div class="col-3">
             <div class="card" style="width: 25rem;">
                 <img src="https://www.mimiscafe.com/wp-content/uploads/2019/03/Turkey-Hummus-Sandwich_840x560-px.jpg" class="card-img-top" height="300px" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Lunch</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div>
+                    <div class="foodLog">
+                        <table class="table lunchTable">
+                            <thead>
+                              <tr>
+                                <th scope="col">Food</th>
+                                <th scope="col">Calories</th>
+                              </tr>
+                            </thead>
+                            <tbody class="lunchTableBody">
+                            </tbody>
+                          </table>
+                    </div>
         </div>
         <div class="col-3">
             <div class="card" style="width: 25rem;">
                 <img src="https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2017/10/high-protein-dinners-slow-cooker-meatballs-image.jpg" class="card-img-top" height="300px" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Dinner</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div>
+                    <div class="foodLog">
+                        <table class="table dinnerTable">
+                            <thead>
+                              <tr>
+                                <th scope="col">Food</th>
+                                <th scope="col">Calories</th>
+                              </tr>
+                            </thead>
+                            <tbody class="dinnerTableBody">
+                            </tbody>
+                          </table>
+                    </div>
         </div>
         <div class="col-3">
             <div class="card" style="width: 25rem;">
                 <img src="https://www.landolakes.com/RecipeManagementSystem/media/Recipe-Media-Files/Recipes/Retail/x17/2018_Sweet-Sallty-Snack-Mix_5817_600x600.jpg?ext=.jpg" class="card-img-top" height="300px" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Snacks</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div>
+                    <div class="foodLog">
+                        <table class="table snacksTable">
+                            <thead>
+                              <tr>
+                                <th scope="col">Food</th>
+                                <th scope="col">Calories</th>
+                              </tr>
+                            </thead>
+                            <tbody class="snacksTableBody">
+                            </tbody>
+                          </table>
+                    </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
