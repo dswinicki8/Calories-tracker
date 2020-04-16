@@ -7,6 +7,13 @@ var lunchCalories = [];
 var dinnerCalories = [];
 var snacksCalories = [];
 var mealSelector = $("#mealSelector").val();
+var breakfastCalItem = 0;
+var lunchCalItem = 0;
+var dinnerCalItem = 0;
+var snacksCalItem = 0;
+
+google.charts.load("current", { packages: ["corechart"] });
+
 // Save user info to local storage 
 function userInfo() {
 }
@@ -28,7 +35,6 @@ function foodLogger() {
                 console.log(results[i].fields.nf_calories)
             }
             $(".hide").removeClass("hide");
-
             $("#foodBtn0").text(response.hits[0].fields.item_name);
             $("#foodBtn1").text(response.hits[1].fields.item_name);
             $("#foodBtn2").text(response.hits[2].fields.item_name);
@@ -36,7 +42,6 @@ function foodLogger() {
             $("#foodBtn4").text(response.hits[4].fields.item_name);
             $("#foodBtn5").text(response.hits[5].fields.item_name);
             $("#foodBtn6").text(response.hits[6].fields.item_name);
-
             $("#foodBtn0").attr("data-food-name", response.hits[0].fields.item_name);
             $("#foodBtn0").attr("data-food-calories", response.hits[0].fields.nf_calories)
             $("#foodBtn1").attr("data-food-name", response.hits[1].fields.item_name);
@@ -54,31 +59,8 @@ function foodLogger() {
             // }
         });
 };
-
 function userInfo() {
 }
-
-// Call API to search recipes
-recipeSearch(); 
-function recipeSearch() {
-    var calMin = "100"; 
-    var calMax = "600"; 
-    var health = "Vegan"; 
-    var mealType = "Breakfast"; 
-    var recipeSearch = "lettuce"; 
-    var queryURL = "https://api.nal.usda.gov/fdc/v1/food/chicken?api_key=bodp5l7wgh5Qjd3h4BLCdmRB0ZGatNtQkUyqQGfT"
-    // var queryURL = "https://api.edamam.com/search?q=" + recipeSearch + "&app_id=$e894ad4d&app_key=$149f6e6bf3a9947e0fa81425b1ad9c26&from=&to=3&calories=" + calMin + "-" + calMax + "&health=" + health + "&mealType=" + mealType
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    })
-        //
-        .then(function (response) {
-            console.log(response)
-            
-  
-        });
-};
 
 $(".foodOption").click(saveFood);
 // Save foods to local storage 
@@ -86,7 +68,6 @@ function saveFood() {
     var mealSelector = $("#mealSelector").val();
     var foodItem = $(this).attr("data-food-name");
     var foodCalories = $(this).attr("data-food-calories");
-
     if (mealSelector == "breakfast") {
         console.log(mealSelector);
         breakfastArray.push(foodItem);
@@ -106,6 +87,7 @@ function saveFood() {
             tRow.append(food, calories);
             // Append the table row to the table body
             $(".breakfastTableBody").append(tRow);
+            console.log(parseInt(breakfastCalories[i]))
         }
     };
 
@@ -116,6 +98,9 @@ function saveFood() {
 
     }
 
+        breakfastCalItem += parseInt(foodCalories)
+
+    
     if (mealSelector == "lunch") {
         console.log(mealSelector);
         lunchArray.push(foodItem);
@@ -136,8 +121,8 @@ function saveFood() {
             // Append the table row to the table body
             $(".lunchTableBody").append(tRow);
         }
+        lunchCalItem += parseInt(foodCalories)
     }
-
     if (mealSelector == "dinner") {
         console.log(mealSelector);
         dinnerArray.push(foodItem);
@@ -158,8 +143,8 @@ function saveFood() {
             // Append the table row to the table body
             $(".dinnerTableBody").append(tRow);
         }
+        dinnerCalItem += parseInt(foodCalories)
     }
-
     if (mealSelector == "snack") {
         console.log(mealSelector);
         snacksArray.push(foodItem);
@@ -182,10 +167,6 @@ function saveFood() {
         }
     };
 
-//save logged foods to local storage 
-// $(".foodOption").click(saveFoodLists);
-// function saveFoodLists(event) {
-// event.preventDefault();
 
 // localStorage.setItem("breakfast", JSON.stringify(breakfast));
 // var breakfast = {
