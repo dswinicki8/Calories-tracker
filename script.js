@@ -165,6 +165,7 @@ function saveFood() {
 
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
+        
         var data = google.visualization.arrayToDataTable([
             ['Task', 'Calories per Meal'],
             ['Breakfast', breakfastCalItem],
@@ -174,6 +175,8 @@ function saveFood() {
         ]);
 
         var options = {
+            fontName:'Unica One',
+            fontSize: '25',
             title: 'Daily Calorie Breakdown',
             pieHole: 0.4,
             is3D: true,

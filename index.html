@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
     <title>Calorie Tracker</title>
 </head>
 
 <body>
     
-    <div class="container-fluid">
+    <div class="container-full-bg">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4 text-center">Calorie Tracker</h1>
-                <h3 class="lead text-center">An app that makes the daily chore of logging calories easier!
+                <h1 class="display-4 text-center main-title">Calorie Tracker<i class ="fas fa-apple-alt ml-2"></i></h1>
+                <h3 class="lead text-center">Ease the daily chore of logging calories!
                 </h3>
             </div>
         </div>
@@ -52,14 +54,14 @@
                                 </div>
                                 <input type="text" class="form-control" id="foodSearch" aria-describedby="basic-addon3">
                             </div>
-                            <button type="button" class="btn btn-success" id="searchBtn">Search</button>
+                            <button type="button" class="btn btn-success" id="searchBtn">Search <i class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </div>
                 <div class="row ml-auto">
-                    <div class="card-transparent mt-5" id="searchCard" style="width: 60rem; height: 30rem;">
+                    <div class="card text-white bg-secondary border-dark mt-5" id="searchCard" style="width: 60rem; height: 35rem;">
                         <div class="card-body">
-                            <h5 class="card-title">Search Results:</h5>
+                            <h2 class="card-title">Search Results:</h2>
                             <div class="foodOptions">
                                 <ul class="list-group list-group-flush">
                                     <button type="button" class="btn btn-success hide mt-3 foodOption "
@@ -94,9 +96,13 @@
 
     <div class="row ml-auto mr-auto mt-5">
         <div class="col-3">
-            <div class="card">
-                <img src="https://media.istockphoto.com/photos/breakfast-table-picture-id938158500?k=6&m=938158500&s=612x612&w=0&h=jQesaJxMrVe5w1Tibgm724d8BD_HWVoCl70l-uqoADs="
-                    class="card-img-top" height="300px" alt="picture of breakfast">
+            <div class="card border-dark">
+                <div class="thumbnail_container">
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                            class="card-img-top" alt="picture of breakfast">
+                    </div>
+                </div>
                 <div class="card-body">
                     <h4 class="card-title">Breakfast</h4>
                 </div>
@@ -115,9 +121,13 @@
             </div>
         </div>
         <div class="col-3">
-            <div class="card">
-                <img src="https://www.mimiscafe.com/wp-content/uploads/2019/03/Turkey-Hummus-Sandwich_840x560-px.jpg"
-                    class="card-img-top" height="300px" alt="picture of sandwich">
+            <div class="card border-dark">
+                <div class="thumbnail_container">
+                    <div class="thumbnail">
+                        <img src="https://cdn.loveandlemons.com/wp-content/uploads/2018/01/lunch-ideas.jpg"
+                            class="card-img-top" alt="picture of sandwich">
+                    </div>
+                </div>
                 <div class="card-body">
                     <h4 class="card-title">Lunch</h4>
                 </div>
@@ -136,9 +146,13 @@
             </div>
         </div>
         <div class="col-3">
-            <div class="card">
-                <img src="https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2017/10/high-protein-dinners-slow-cooker-meatballs-image.jpg"
-                    class="card-img-top" height="300px" alt="picture of pasta dinner">
+            <div class="card border-dark">
+                <div class="thumbnail_container">
+                    <div class="thumbnail">
+                        <img src="https://media1.popsugar-assets.com/files/thumbor/KD9ALbJbbvNqaYBI-L3zykcOpMw/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2019/11/18/102/n/1922729/2010a3325dd3450317e273.27544324_/i/healthy-meal-prep-dinner-recipes.jpg"
+                            class="card-img-top" alt="picture of pasta dinner">
+                    </div>
+                </div>
                 <div class="card-body">
                     <h4 class="card-title">Dinner</h4>
                 </div>
@@ -157,9 +171,13 @@
             </div>
         </div>
         <div class="col-3">
-            <div class="card">
-                <img src="https://www.landolakes.com/RecipeManagementSystem/media/Recipe-Media-Files/Recipes/Retail/x17/2018_Sweet-Sallty-Snack-Mix_5817_600x600.jpg?ext=.jpg"
-                    class="card-img-top" height="300px" alt="picture of snacks">
+            <div class="card border-dark">
+                <div class="thumbnail_container">
+                    <div class="thumbnail">
+                        <img src="https://www.landolakes.com/RecipeManagementSystem/media/Recipe-Media-Files/Recipes/Retail/x17/2018_Sweet-Sallty-Snack-Mix_5817_600x600.jpg?ext=.jpg"
+                            class="card-img-top" alt="picture of snacks">
+                    </div>
+                </div>
                 <div class="card-body">
                     <h4 class="card-title">Snacks</h4>
                 </div>
@@ -178,6 +196,12 @@
             </div>
         </div>
     </div>
+
+    <footer class="page-footer font-small mt-5">
+        <div class="footer-copyright text-center py-3 footer-text">Team 3
+          <a class="footer-text" href="https://github.com/dswinicki8/Calories-tracker">Github</a>
+        </div>
+      </footer>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
